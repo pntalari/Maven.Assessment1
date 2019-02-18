@@ -28,7 +28,7 @@ public class Dog extends Pet {
      * @param name name of this dog
      */
     public Dog(String name) {
-        this.name = name;
+        super(name);
 
     }
 
