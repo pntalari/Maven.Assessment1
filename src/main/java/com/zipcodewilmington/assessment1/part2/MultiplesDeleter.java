@@ -10,22 +10,24 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with evens removed
      */
     public Integer[] deleteEvens(Integer[] ints) {
-        Integer[] arr = new Integer[ints.length];
+
         StringBuilder strBuilder = new StringBuilder();
         String str ="";
-        for (int i=0;i<ints.length;i++)
+
+        for (int i = 0;i<ints.length;i++)
         {
-            if(ints[i]%2==0)
+            if (ints[i]%2!=0)
             {
-                strBuilder.append(ints[i]);
-              //  int literal = Integer.parseInt(ints[i].toString());
-                //arr[i] = literal;
+                str = str + ints[i] + " ";
             }
         }
+        String[] integers = str.split(" ");
 
-        for (int i=0;i<strBuilder.length()-1;i++)
+        Integer[] arr = new Integer[integers.length];
+
+        for (int j = 0;j<integers.length;j++)
         {
-            arr[i] = Integer.parseInt(str.substring(i,i+1));
+            arr[j] = Integer.parseInt(integers[j]);
         }
 
         return arr;
