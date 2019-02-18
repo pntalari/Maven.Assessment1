@@ -11,21 +11,22 @@ public class Jumper {
     {
         int count = 0;
         Integer var = Integer.MAX_VALUE;
+
         if (k>j) {
-            while (var != 0) {
+            while (var != 0 && k>j) {
                 var = k - j;
                 k = var;
-
                 count++;
             }
         }
-
         else
         {
             var = j - k;
             count ++;
         }
-
+        if (k==j) {
+            count++;
+        }
         System.out.printf("Bob must jump %d times to reach %d height flag",count,k);
 
         return count;
