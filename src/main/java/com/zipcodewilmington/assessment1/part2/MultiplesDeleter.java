@@ -104,14 +104,11 @@ public class MultiplesDeleter {
             }
         }
         String[] integers = str.split(" ");
-
         Integer[] arr = new Integer[integers.length];
-
         for (int j = 0;j<integers.length;j++)
         {
             arr[j] = Integer.parseInt(integers[j]);
         }
-
         return arr;
     }
 }

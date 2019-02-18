@@ -34,19 +34,25 @@ public class ArrayUtils {
      */
     public static Object[] removeValue(Object[] objectArray, Object objectToRemove) {
         StringBuilder str = new StringBuilder();
-        ArrayList<Integer> arrList = new ArrayList<>();
-        Object[] retArray = new Integer[str.length()];
+        String stringtest = new String();
+       // ArrayList<Integer> arrList = new ArrayList<>();
+        //Object[] retArray = new Integer[str.length()];
 
         for (int i=0;i<objectArray.length;i++) {
             if (!objectArray[i].equals(objectToRemove))
-                arrList.add((Integer)(objectArray[i]));
-                //str.append(objectArray[i]);
+                //arrList.add((Integer)(objectArray[i]));
+            {
+                stringtest = stringtest + objectArray[i] + " ";
+            }
         }
-        while (arrList.remove(null))
-        {}
+        String[] integers = stringtest.split(" ");
+        Integer[] arr = new Integer[integers.length];
+        for (int j = 0;j<integers.length;j++)
+        {
+            arr[j] = Integer.parseInt(integers[j]);
+        }
 
-        retArray = arrList.toArray();
-        return retArray;
+        return arr;
     }
 
     /**
