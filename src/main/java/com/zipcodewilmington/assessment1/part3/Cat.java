@@ -6,7 +6,7 @@ package com.zipcodewilmington.assessment1.part3;
 public class Cat extends Pet {
 
     private String name = "";
-    private int age;
+    private int age = 0;
     /**
      * @param name name of this Cat
      * @param age age of this Cat
@@ -20,6 +20,7 @@ public class Cat extends Pet {
      * @param age age of this Cat
      */
     public Cat(Integer age) {
+
         super(age);
     }
 

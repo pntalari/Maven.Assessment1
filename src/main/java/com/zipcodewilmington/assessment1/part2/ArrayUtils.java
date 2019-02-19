@@ -35,12 +35,9 @@ public class ArrayUtils {
     public static Object[] removeValue(Object[] objectArray, Object objectToRemove) {
         StringBuilder str = new StringBuilder();
         String stringtest = new String();
-       // ArrayList<Integer> arrList = new ArrayList<>();
-        //Object[] retArray = new Integer[str.length()];
 
         for (int i=0;i<objectArray.length;i++) {
             if (!objectArray[i].equals(objectToRemove))
-                //arrList.add((Integer)(objectArray[i]));
             {
                 stringtest = stringtest + objectArray[i] + " ";
             }
