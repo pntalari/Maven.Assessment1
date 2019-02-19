@@ -5,15 +5,14 @@ package com.zipcodewilmington.assessment1.part3;
  */
 public class Dog extends Pet {
 
-    private String name = "";
-    private int age;
+   // private String name = "";
+    //private int age;
     /**
      * @param name name of this Dog
      * @param age age of this dog
      */
     public Dog(String name, Integer age) {
-        this.name = name;
-        this.age = age;
+        super(name,age);
 
     }
 
@@ -21,7 +20,7 @@ public class Dog extends Pet {
      * @param age age of this dog
      */
     public Dog(Integer age) {
-        this.age = age;
+        super("Dog name", age);
     }
 
     /**
@@ -39,8 +38,7 @@ public class Dog extends Pet {
      * age is 0
      */
     public Dog() {
-        name = "Dog name";
-        age = 0;
+        super("Dog name",0);
     }
 
     /**

@@ -10,7 +10,7 @@ import java.util.Date;
 public abstract class Pet implements Animal {
     private String name;
     private int age;
-    PetOwner pet;
+    protected PetOwner petOwner;
 
     /**
      * nullary constructor
@@ -52,7 +52,7 @@ public abstract class Pet implements Animal {
      */
     public String getName() {
 
-        return name;
+        return this.name;
     }
 
 
@@ -69,7 +69,8 @@ public abstract class Pet implements Animal {
      * ensure this instance of `Pet` is added to the owner's composite `pets` list
      */
     public void setOwner(PetOwner newPetOwner) {
-        this.pet = newPetOwner;
+
+        this.petOwner = newPetOwner;
     }
 
     /**
@@ -77,7 +78,7 @@ public abstract class Pet implements Animal {
      */
     public PetOwner getOwner() {
 
-        return pet;
+        return petOwner;
     }
 
     public void setName(String name) {
@@ -85,7 +86,8 @@ public abstract class Pet implements Animal {
         this.name = name;
     }
 
-    public void setAge(int age) {
+    public void setAge(int age)
+    {
 
         this.age = age;
     }
