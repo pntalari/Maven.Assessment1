@@ -12,7 +12,7 @@ public class Jumper {
         double r = (double)k/j;
         double count = Math.ceil(r);
 
-        System.out.printf("Bob must jump %d times to reach %d height flag",count,k);
+        System.out.printf("Bob must jump %f times to reach %d height flag",count,k);
 
         return (int)count;
     }
