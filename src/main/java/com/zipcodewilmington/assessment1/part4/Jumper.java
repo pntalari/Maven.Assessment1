@@ -9,11 +9,13 @@ public class Jumper {
      */
     public int jumps(int k, int j)
     {
-        double r = (double)k/j;
-        double count = Math.ceil(r);
+//        double r = (double)k/j;
+//        double count = Math.ceil(r);
+        int kmodj = k%j;
+        int kdivj = k/j;
+        int jump = kmodj + kdivj;
 
-        System.out.printf("Bob must jump %f times to reach %d height flag",count,k);
-
-        return (int)count;
+        return jump;
     }
+
 }
